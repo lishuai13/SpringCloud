@@ -1,0 +1,23 @@
+server:
+  port: 91
+
+#spring的相关配置
+spring:
+  application:
+    name: springcloud-zuul-gateway
+
+    #eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/,http:/ /eureka7003:7003/eureka/
+  instance:
+    instance-id: zuul-gateway91.com
+
+#Zuul路由映射
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-service
+    mydept.path: /lishuai/**  #使用这个名称替代上面的服务吗
+  ignored-services: springcloud-provider-service # 不能再使用这个服务名访问；
+

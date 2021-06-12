@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    username: root
+    password: 143188
+    url: jdbc:mysql://localhost:3306/provider-8001?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: springcloud-provider-Service  #服务名称：Application
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml #XML文件地址
+  type-aliases-package: entity
+
+server:
+  port: 8001
+
+#eureka配置 ：客户端注册到哪里
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://localhost:7001/eureka  #单注册中心配置
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka,http://eureka7003:7003/eureka #集群配置
+  instance:
+    instance-id: springcloud-provider-8001-hystrix  #服务显示的信息：status
+
+#配置完善监控信息
+info:
+  app.name: lishuai.springcloud
+  company.name: com.lishuai
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

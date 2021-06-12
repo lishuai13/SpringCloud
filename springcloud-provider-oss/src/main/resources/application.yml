@@ -1,0 +1,28 @@
+server:
+  port: 6001
+
+# oss 属性自定义
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-shanghai.aliyuncs.com
+      keyid: LTAI5t8p9iCWyC3QSYztHWwc
+      keysecret: NB4xPHhhoGs4XNMAYTlN49qPM3Tn6J
+      bucketname: lishuai13
+
+# 限制上传文件大下
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  application:
+    name: springcloud-oss-service
+
+#eureka配置 ：客户端注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: oss-service
+

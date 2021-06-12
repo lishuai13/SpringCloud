@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: 8001-config

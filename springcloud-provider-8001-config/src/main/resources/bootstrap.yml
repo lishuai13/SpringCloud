@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: 8001-config #github中配置文件的名字，不需要后缀
+      label: master   #github中对应的分支
+      profile: dev  #配置文件中指定环境
+      uri: http://localhost:92  #配置中心的地址
