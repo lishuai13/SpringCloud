@@ -6,8 +6,8 @@ aliyun:
   oss:
     file:
       endpoint: oss-cn-shanghai.aliyuncs.com
-      keyid: LTAI5t8p9iCWyC3QSYztHWwc
-      keysecret: NB4xPHhhoGs4XNMAYTlN49qPM3Tn6J
+      keyid: ********
+      keysecret: ********
       bucketname: lishuai13
 
 # 限制上传文件大下
